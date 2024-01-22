@@ -1,0 +1,65 @@
+@use './breakpoints' as breakpoints;
+
+.search-container{
+    position: absolute;
+    right: 35%;
+    @include breakpoints.sm {
+        top: 75px;
+        left: 35%;
+    }
+    @include breakpoints.md {
+        top: inherit;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    & ul{
+        margin-top: 0.25rem;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: scroll;
+        background-color: grey;
+        border-radius: 8px;
+        padding: 0.5rem;
+        z-index: 2;
+        transition: display 0.5s ease-in;
+    }
+    & ul > li{
+        color: white;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.25);
+        width: 100%;
+        // border-radius: 0.25rem;
+        padding: 0.25rem 0.15rem;
+        &:hover{
+            background-color: rgb(0,0,0,0.15)
+        }
+    }
+    
+}
+
+.search-input{
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+    & input{
+        margin-left: 0.5rem;
+        border: 0;
+        background: inherit;
+        color: white;
+        width: 250px;
+        padding: 0.25rem;
+    }
+    & button {
+        & img{
+        margin-top: 6px;
+        }
+    }
+}
+
+
+
