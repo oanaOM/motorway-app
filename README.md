@@ -53,7 +53,7 @@ We have an tags api endpoint at `http://localhost:8000/api/tags` which returns a
   ]
 ```
 
-By adding a `tag` query the endpoint will return an array of matching tags `http://localhost:8000/tags?tag=re`:
+By adding a `tag` query the endpoint will return an array of matching tags `http://localhost:8000/api/tags?tag=re`:
 
 ```
   [
@@ -106,7 +106,7 @@ We have cars api endpoint available at `http://localhost:8000/api/cars` which re
 ]
 ```
 
-By adding a `tag` query the endpoint will return an array of matching cars `http://localhost:8000/cars?tag=red`
+By adding a `tag` query the endpoint will return an array of matching cars `http://localhost:8000/api/cars?tag=red`
 
 ```
 [
