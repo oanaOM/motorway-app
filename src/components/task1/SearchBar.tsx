@@ -52,24 +52,24 @@ const SearchBar: React.FC = () => {
   return (
     <div className="search-container">
       <div className="search-input">
-        <img src={SearchSVG} width="24" height="24" />
+        <img src={SearchSVG} width="24" height="24" alt="search icon" />
         <input
           type="text"
-          role="input"
+          role="search"
           placeholder="Search for vehicles"
           value={searchInput}
           onChange={handleSearch}
           data-testid="search-input"
         />
         {showClearButton && (
-          <button onClick={handleOnClear}>
-            <img src={CloseSVG} width="18" height="18" />
+          <button onClick={handleOnClear} role="button" aria-label="clearButton">
+            <img src={CloseSVG} width="18" height="18" alt="close icon" />
           </button>
         )}
 
         {searchInput.length === 0 && tags.length === 0 && (
-          <button onClick={handleShowAllTags} role="button" data-testid="show-all-tags">
-            <img src={ArrowDownSVG} width="18" height="18" />
+          <button onClick={handleShowAllTags} role="button" data-testid="show-all-tags" aria-label="arrowDown">
+            <img src={ArrowDownSVG} width="18" height="18" alt="arrow down icon" />
           </button>
         )}
       </div>
@@ -83,7 +83,7 @@ const SearchBar: React.FC = () => {
           tags &&
           tags.map((tag, index) => (
             <li key={index}>
-              <button key={index} onClick={() => handleSelect(tag)} data-testid={tag}>
+              <button key={index} onClick={() => handleSelect(tag)} data-testid={tag} aria-label={tag}>
                 {tag.replaceAll('-', ' ').charAt(0).toUpperCase() + tag.slice(1)}
               </button>
             </li>

@@ -29,7 +29,7 @@ const CarsList: React.FC = () => {
       <div className="container">
         {!cars && !isLoading && (
           <div>
-            <img src={SearchSVG} />
+            <img src={SearchSVG} alt="search icon" />
             <h3>Use the search to find vehicles</h3>
           </div>
         )}

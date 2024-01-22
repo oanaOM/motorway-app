@@ -7,12 +7,13 @@ interface CarCardProps {
 
 export function CarCard({ car }: CarCardProps) {
   return (
-    <div className="card">
+    <div className="card" data-testid={car.id}>
       <AsyncImage
         src={`${car.url}.png`}
         sources={[{ type: 'image/webp', srcSet: `${car.url}.webp` }]}
         style={{ width: 500, height: 400 }}
         loader={<div style={{ background: '#888' }} />}
+        alt={`Image for ${car.id}`}
       />
     </div>
   );

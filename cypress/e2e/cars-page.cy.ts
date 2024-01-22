@@ -26,5 +26,6 @@ describe('Cars page', () => {
     cy.get('[data-testid=show-all-tags]').click();
     cy.get('[data-testid=red]').click();
     cy.get('h1').should('have.text', 'Red');
+    cy.get('img').invoke('prop', 'naturalWidth').should('be.greaterThan', 0);
   });
 });
