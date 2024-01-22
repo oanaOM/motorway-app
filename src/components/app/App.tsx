@@ -1,5 +1,6 @@
+import { AppContextProvider } from '../AppContextProvider';
 import Header from '../header/Header';
-import Task2 from '../task2/Task2';
+import CarsList from '../task2/CarsList';
 
 import styles from './App.module.scss';
 
@@ -14,10 +15,12 @@ import styles from './App.module.scss';
 const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <main className={styles.main}>
-        <Task2 />
-      </main>
+      <AppContextProvider>
+        <Header />
+        <main className={styles.main}>
+          <CarsList />
+        </main>
+      </AppContextProvider>
     </>
   );
 };

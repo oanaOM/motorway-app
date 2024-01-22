@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Logo from '../../assets/icons/logo.svg?react';
-import Task1 from '../task1/Task1';
 import HeaderLinks from './HeaderLinks';
 
 import styles from './Header.module.scss';
+import SearchBar from '../task1/SearchBar';
 
 const Header: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         <Logo />
       </div>
       <div className={styles.nav}>
-        <Task1 />
+        <SearchBar />
         <HeaderLinks />
       </div>
     </header>
